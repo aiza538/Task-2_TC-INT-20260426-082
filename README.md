@@ -71,15 +71,12 @@ npx tailwindcss init -p
 Step 7: Start Development Server
 Run this command: npm run dev
 
-Step 8: Open Browser
-Go to http://localhost:5173 to view the website
-
-Step 9: Build for Production
+Step 8: Build for Production
 Run this command: npm run build
 
 ## Live Demo
 
-https://teyzixcoreweb.netlify.app/
+https://teyzix-core-web-enhancement.netlify.app
 
 ## Author
 
