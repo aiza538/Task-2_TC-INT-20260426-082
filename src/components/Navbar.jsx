@@ -27,40 +27,31 @@ function Navbar({ darkMode, toggleDarkMode }) {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         
-        <a href="#home" className="text-2xl font-bold group relative overflow-hidden">
+        <a href="#home" className="text-2xl font-bold">
           <span className="text-primary">TEYZIX</span>
           <span className="text-gray-800 dark:text-white">CORE</span>
-          {/* Green border bottom animation */}
-          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
         </a>
         
         <div className="hidden md:flex gap-8 items-center">
           {links.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href} 
-              className="text-gray-700 dark:text-gray-300 hover:text-primary transition-all duration-300 relative group overflow-hidden py-1"
-            >
+            <a key={link.name} href={link.href} className="text-gray-700 dark:text-gray-300 hover:text-primary transition-all duration-300">
               {link.name}
-              {/* Green underline animation */}
-              <span className="absolute -bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
-          <button className="bg-primary text-white px-5 py-2 rounded-full font-semibold text-sm hover:bg-primaryDark hover:scale-105 transition-all duration-300 relative overflow-hidden group">
-            <span className="relative z-10">Get in Touch</span>
-            <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+          <button className="bg-primary text-white px-5 py-2 rounded-full font-semibold text-sm hover:bg-primaryDark transition-all duration-300">
+            Get in Touch
           </button>
         </div>
         
         <div className="flex items-center gap-3">
           <button 
             onClick={toggleDarkMode} 
-            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 hover:scale-110 group relative overflow-hidden"
+            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300"
           >
             {darkMode ? (
-              <Sun className="w-5 h-5 text-yellow-500" />
+              <Moon className="w-5 h-5 text-gray-300" />
             ) : (
-              <Moon className="w-5 h-5 text-gray-700" />
+              <Sun className="w-5 h-5 text-yellow-500" />
             )}
           </button>
           
@@ -75,12 +66,11 @@ function Navbar({ darkMode, toggleDarkMode }) {
       }`}>
         <div className="flex flex-col gap-3 px-4 pb-5">
           {links.map((link) => (
-            <a key={link.name} href={link.href} onClick={() => setIsOpen(false)} className="text-gray-700 dark:text-gray-300 hover:text-primary py-2 transition-colors relative group overflow-hidden inline-block">
+            <a key={link.name} href={link.href} onClick={() => setIsOpen(false)} className="text-gray-700 dark:text-gray-300 hover:text-primary py-2">
               {link.name}
-              <span className="absolute -bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
-          <button className="bg-primary text-white px-5 py-2 rounded-full font-semibold text-sm w-full hover:bg-primaryDark transition-all duration-300">
+          <button className="bg-primary text-white px-5 py-2 rounded-full font-semibold text-sm w-full">
             Get in Touch
           </button>
         </div>
